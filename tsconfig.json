@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "jsx": "react-native",
+    "moduleResolution": "node",
+    "types": ["react-native"],
+    "lib": ["es2019"],
+    "strict": true,
+    "allowJs": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["src/*"],
+      "@ui/*": ["src/ui/*"],
+      "@backend/*": ["src/backend/*"],
+      "@pages/*": ["app/*"],
+      "@modals/*": ["src/ui/modals/*"],
+      "@widgets/*": ["src/ui/widgets/*"],
+      "@components/*": ["src/ui/components/*"],
+      "@styles/*": ["src/ui/styles/*"],
+      "@stores/*": ["src/backend/stores/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
+  ],
+  "extends": "expo/tsconfig.base",
+  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"]
+}
