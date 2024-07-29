@@ -29,3 +29,14 @@ This is a mobile project using the following technologies:
 4. Change the `name`, `slug`, and `scheme` in `app.json`
 5. Setup EAS (Expo Application Services) in `app.json` under `extra.eas.projectId`
 6. Configure App Store Connect information in `eas.json`
+
+## Configuring for GitHub Actions
+
+If you want GitHub Actions to build your app, you need to set the `EXPO_TOKEN` secret.
+
+The workflow templates in `.github/workflow_templates` contain:
+- `build-<PLATFORM>-dev.yml` for building a development client
+  - This means the app loads its JavaScript a computer/Metro server
+- `build-<PLATFORM>-staging.yml` for building a 'staging' client
+  - A 'staging' client is similar to a preview build.
+  - This preview build can be pushed to TestFlight if you have an Apple Developer account.
